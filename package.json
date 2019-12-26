@@ -1,5 +1,5 @@
 {
-  "name": "t-message",
+  "name": "@dikac/t-message",
   "version": "0.0.2",
   "description": "Typescript message",
   "dependencies": {
