@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-message",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Typescript message",
   "dependencies": {
     "@types/node": "^12.12.11",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "spec-run": "jasmine --config=./jasmine.json",
-    "spec": "npm-run-all spec-compile spec-run",
+    "spec": "npm-run-all compile spec-compile spec-run",
     "spec-compile": "npm-run-all --parallel spec-compile-script ",
     "spec-compile-watch": "npm-run-all --parallel spec-compile-watch-script",
     "spec-compile-script": "tsc -p tsconfig-spec.json",
