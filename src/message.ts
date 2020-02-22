@@ -1,4 +1,4 @@
-export default interface Message<M = string>  {
+export default interface Message<M>  {
 
     message : M;
 }
