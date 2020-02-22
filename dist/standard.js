@@ -9,6 +9,9 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    /**
+     * standard implementation of {@link Message}
+     */
     class Standard {
         constructor(message) {
             this.message = message;
