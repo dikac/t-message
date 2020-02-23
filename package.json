@@ -1,8 +1,10 @@
 {
   "name": "@dikac/t-message",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Typescript message",
-  "dependencies": {},
+  "dependencies": {
+    "@dikac/t-object": "^0.16.0"
+  },
   "devDependencies": {
     "@types/jasmine": "^3.5.6",
     "cpy-cli": "^3.1.0",
