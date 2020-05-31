@@ -1,6 +1,6 @@
-import Message from "./message";
+import Message, {Infer} from "./message";
 
-export default class Wrapper<Msg, Container extends Message<Msg> = Message<Msg>> implements Readonly<Message<Msg>>{
+export default class Wrapper<Container extends Message = Message> implements Readonly<Message<Infer<Container>>>{
 
     constructor(
         public messageContainer : Container
@@ -8,7 +8,7 @@ export default class Wrapper<Msg, Container extends Message<Msg> = Message<Msg>>
 
     }
 
-    get message() : Msg {
+    get message() : Infer<Container> {
 
         return this.messageContainer.message;
     }
