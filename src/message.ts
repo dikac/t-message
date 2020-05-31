@@ -1,7 +1,9 @@
 /**
  * multi purpose message interface
  */
-export default interface Message<M>  {
+export default interface Message<Message>  {
 
-    message : M;
+    message : Message;
 }
+
+export type Infer<Data> = Data extends Message<infer As> ? As : never;
