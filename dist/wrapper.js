@@ -11,7 +11,7 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     class Wrapper {
         constructor(messageContainer) {
-            this.messageContainer = messageContainer;
+            this.subject = messageContainer;
         }
         get message() {
             return this.messageContainer.message;
