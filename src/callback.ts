@@ -1,10 +1,10 @@
 import Message from "./message";
 
-export default class Callback<Msg, Argument extends any[]> implements Readonly<Message<Msg>>{
+export default class Callback<Msg, Arguments extends any[]> implements Readonly<Message<Msg>>{
 
     constructor(
-        public callback : (...args : Argument) => Msg,
-        public argument : Argument,
+        public callback : (...args : Arguments) => Msg,
+        public argument : Arguments,
     ) {
 
     }

@@ -10,6 +10,6 @@ export default class Wrapper<Container extends Message = Message> implements Rea
 
     get message(): Infer<Container> {
 
-        return this.subject.message;
+        return <Infer<Container>> this.subject.message;
     }
 }
