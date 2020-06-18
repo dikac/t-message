@@ -1,7 +1,13 @@
 import Message from "../message";
 import TypeObject from "@dikac/t-object/boolean/type";
+import Infer from "../infer/message";
 
-export default function Type<V, Assumption extends Message<V>>(value : any, validation : (value : any) => value is V) : value is Assumption {
+export default function Type<
+    Assumption extends Message
+>(
+    value : any,
+    validation : (value : any) => value is Infer<Assumption> = (value : any) : value is Infer<Assumption> =>true
+) : value is Assumption {
 
     if(!TypeObject<Assumption>(value)) {
 

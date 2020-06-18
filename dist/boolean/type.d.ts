@@ -1,2 +1,3 @@
 import Message from "../message";
-export default function Type<V, Assumption extends Message<V>>(value: any, validation: (value: any) => value is V): value is Assumption;
+import Infer from "../infer/message";
+export default function Type<Assumption extends Message>(value: any, validation?: (value: any) => value is Infer<Assumption>): value is Assumption;
