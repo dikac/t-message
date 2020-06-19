@@ -4,13 +4,13 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-value/memoize", "@dikac/t-value/callback"], factory);
+        define(["require", "exports", "@dikac/t-function/return/memoize", "@dikac/t-function/return/callback"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const memoize_1 = require("@dikac/t-value/memoize");
-    const callback_1 = require("@dikac/t-value/callback");
+    const memoize_1 = require("@dikac/t-function/return/memoize");
+    const callback_1 = require("@dikac/t-function/return/callback");
     /**
      * Wrap {@link Message} and cache its value
      *
@@ -32,7 +32,7 @@
             this.memoized.clear();
         }
         get message() {
-            return this.memoized.value;
+            return this.memoized.return;
         }
     }
     exports.default = Memoize;
