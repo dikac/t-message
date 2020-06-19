@@ -4,7 +4,8 @@
   "description": "Typescript message",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-object": "^0.16.1"
+    "@dikac/t-object": "^0.16.1",
+    "@dikac/t-value": "git+file:///b:/t-value"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.10",
