@@ -1,6 +1,5 @@
 import Type from "../../dist/boolean/type";
 import ObjectType from "@dikac/t-object/boolean/type";
-import Standard from "../../dist/standard";
 
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
