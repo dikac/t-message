@@ -19,7 +19,10 @@
     class Memoize {
         constructor(subject) {
             this.subject = subject;
-            let callback = new callback_1.default(() => subject.message, []);
+            let callback = new callback_1.default({
+                value: () => subject.message,
+                argument: []
+            });
             this.memoized = new memoize_1.default(callback);
         }
         get valid() {

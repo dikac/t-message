@@ -22,7 +22,11 @@ export default class Memoize<
         public subject : Container
     ) {
 
-        let callback  = new ReturnCallback(()=>subject.message, []);
+        let callback  = new ReturnCallback({
+            value : ()=>subject.message,
+            argument : []
+        });
+
         this.memoized = new ReturnMemoize(callback);
     }
 
