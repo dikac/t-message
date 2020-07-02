@@ -6,7 +6,6 @@
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-function": "git+file:///b:/t-function",
     "@dikac/t-object": "^0.16.1",
-    "@dikac/t-validatable": "git+file:///b:/t-validatable",
     "@dikac/t-value": "git+file:///b:/t-value"
   },
   "devDependencies": {

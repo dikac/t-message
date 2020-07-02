@@ -1,6 +1,5 @@
 import Message from "./message";
 import Infer from "./infer/message";
-import Validatable from "@dikac/t-validatable/validatable";
 import ReturnMemoize from "@dikac/t-function/return/memoize";
 import ReturnCallback from "@dikac/t-function/return/callback";
 import Functions from "@dikac/t-function/functions";
@@ -13,10 +12,9 @@ import Functions from "@dikac/t-function/functions";
 export default class Memoize<
     Container extends Message
 > implements
-    Readonly<Message<Infer<Container>>>,
-    Readonly<Validatable<boolean>>
+    Readonly<Message<Infer<Container>>>
 {
-    protected memoized : ReturnMemoize<ReturnCallback<Functions<[], Infer<Container>>>>;
+    protected memoize : ReturnMemoize<ReturnCallback<Functions<[], Infer<Container>>>>;
 
     constructor(
         public subject : Container
@@ -27,12 +25,12 @@ export default class Memoize<
             argument : []
         });
 
-        this.memoized = new ReturnMemoize(callback);
+        this.memoize = new ReturnMemoize(callback);
     }
 
-    get valid () : boolean {
+    get memoized () : boolean {
 
-        return this.memoized.valid;
+        return this.memoize.memoized;
     }
 
     /**
@@ -40,12 +38,12 @@ export default class Memoize<
      */
     clear () {
 
-        this.memoized.clear();
+        this.memoize.clear();
     }
 
     get message () : Infer<Container> {
 
-        return this.memoized.return;
+        return this.memoize.return;
     }
 
 }
