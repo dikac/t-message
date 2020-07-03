@@ -5,7 +5,7 @@
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-function": "git+file:///b:/t-function",
-    "@dikac/t-object": "^0.16.1",
+    "@dikac/t-object": "git+file:///b:/t-object",
     "@dikac/t-value": "git+file:///b:/t-value"
   },
   "devDependencies": {
