@@ -9,7 +9,7 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    class Wrapper {
+    class Readonly {
         constructor(subject) {
             this.subject = subject;
         }
@@ -17,6 +17,6 @@
             return this.subject.message;
         }
     }
-    exports.default = Wrapper;
+    exports.default = Readonly;
 });
-//# sourceMappingURL=wrapper.js.map
+//# sourceMappingURL=readonly.js.map

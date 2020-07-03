@@ -1,8 +1,5 @@
 import Message from "./message";
 import Infer from "./infer/message";
-import ReturnMemoize from "@dikac/t-function/return/memoize";
-import ReturnCallback from "@dikac/t-function/return/callback";
-import Functions from "@dikac/t-function/functions";
 import ObjectProperty from "@dikac/t-value/object-property";
 import ValueMemoize from "@dikac/t-value/memoize";
 
