@@ -10,8 +10,8 @@ export default class Callback<
 {
 
     constructor(
-        public callback : Fn,
-        public argument : Parameters<Fn>,
+        readonly callback : Fn,
+        readonly argument : Parameters<Fn>,
     ) {
     }
 
