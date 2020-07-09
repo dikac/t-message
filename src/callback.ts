@@ -10,13 +10,14 @@ export default class Callback<
 {
 
     constructor(
-        public subject : Value<Fn> & Argument<Parameters<Fn>>,
+        public callback : Fn,
+        public argument : Parameters<Fn>,
     ) {
     }
 
     get message () : ReturnType<Fn> {
 
-        return Call(this.subject);
+        return this.callback(...this.argument);
     }
 
 
