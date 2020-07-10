@@ -6,9 +6,8 @@ import Value from "@dikac/t-value/value";
 
 export default class Callback<
     Fn extends Functions,
-> implements Readonly<Message<ReturnType<Fn>>>
+> implements Readonly<Message<ReturnType<Fn>>>, Readonly<Argument<Parameters<Fn>>>
 {
-
     constructor(
         readonly callback : Fn,
         readonly argument : Parameters<Fn>,
