@@ -10,7 +10,7 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     const object_1 = require("@dikac/t-object/boolean/object");
-    function Type(value, validation = (value) => true) {
+    function Message(value, validation = (value) => true) {
         if (!object_1.default(value)) {
             return false;
         }
@@ -19,6 +19,6 @@
         }
         return true;
     }
-    exports.default = Type;
+    exports.default = Message;
 });
-//# sourceMappingURL=type.js.map
+//# sourceMappingURL=message.js.map

@@ -1,4 +1,4 @@
-import Type from "../../dist/boolean/type";
+import Type from "../../dist/boolean/message";
 import ObjectType from "@dikac/t-object/boolean/object";
 
 

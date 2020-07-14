@@ -1,4 +1,4 @@
-import Callback from "../dist/callback";
+import Callback from "../dist/callback-from-object";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -10,8 +10,7 @@ describe("basic", function() {
         return number + number;
     };
 
-    let callback = new Callback(fn, [1]);
-
+    let callback = Callback({message:fn, argument:[1]});
 
     it('validate value', function () {
 

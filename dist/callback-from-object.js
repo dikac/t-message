@@ -4,20 +4,15 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+        define(["require", "exports", "./callback"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    class Callback {
-        constructor(callback, argument) {
-            this.callback = callback;
-            this.argument = argument;
-        }
-        get message() {
-            return this.callback(...this.argument);
-        }
+    const callback_1 = require("./callback");
+    function CallbackFromObject(object) {
+        return new callback_1.default(object.message, object.argument);
     }
-    exports.default = Callback;
+    exports.default = CallbackFromObject;
 });
-//# sourceMappingURL=callback.js.map
+//# sourceMappingURL=callback-from-object.js.map
