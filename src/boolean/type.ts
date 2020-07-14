@@ -1,5 +1,5 @@
 import Message from "../message";
-import TypeObject from "@dikac/t-object/boolean/type";
+import TypeObject from "@dikac/t-object/boolean/object";
 import Infer from "../infer/message";
 
 export default function Type<

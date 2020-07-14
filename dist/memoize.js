@@ -4,12 +4,12 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-value/object-property", "@dikac/t-value/memoize"], factory);
+        define(["require", "exports", "@dikac/t-object/value/property", "@dikac/t-value/memoize"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const object_property_1 = require("@dikac/t-value/object-property");
+    const property_1 = require("@dikac/t-object/value/property");
     const memoize_1 = require("@dikac/t-value/memoize");
     /**
      * Wrap {@link Message} and cache its value
@@ -19,7 +19,7 @@
     class Memoize {
         constructor(subject) {
             this.subject = subject;
-            let value = new object_property_1.default(subject, 'message');
+            let value = new property_1.default(subject, 'message');
             this.memoize = new memoize_1.default(value);
         }
         get message() {

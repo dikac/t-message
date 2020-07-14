@@ -4,14 +4,14 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-object/boolean/type"], factory);
+        define(["require", "exports", "@dikac/t-object/boolean/object"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const type_1 = require("@dikac/t-object/boolean/type");
+    const object_1 = require("@dikac/t-object/boolean/object");
     function Type(value, validation = (value) => true) {
-        if (!type_1.default(value)) {
+        if (!object_1.default(value)) {
             return false;
         }
         if (!validation(value.message)) {

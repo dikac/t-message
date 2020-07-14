@@ -1,6 +1,6 @@
 import Message from "./message";
 import Infer from "./infer/message";
-import ObjectProperty from "@dikac/t-value/object-property";
+import ObjectProperty from "@dikac/t-object/value/property";
 import ValueMemoize from "@dikac/t-value/memoize";
 /**
  * Wrap {@link Message} and cache its value
