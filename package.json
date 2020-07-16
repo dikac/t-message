@@ -1,12 +1,12 @@
 {
   "name": "@dikac/t-message",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "Typescript message",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "^0.7.0",
+    "@dikac/t-function": "^0.8.0",
     "@dikac/t-object": "^0.19.2",
-    "@dikac/t-value": "^0.8.6"
+    "@dikac/t-value": "^0.8.9"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.11",
@@ -16,7 +16,7 @@
     "move-cli": "^1.2.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "spec-run": "jasmine --config=./jasmine.json",

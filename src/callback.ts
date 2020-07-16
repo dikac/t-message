@@ -14,7 +14,7 @@ export default class Callback<
 
     get message () : ReturnType<Fn> {
 
-        return this.callback(...this.argument);
+        return <ReturnType<Fn>>this.callback(...this.argument);
     }
 
 
