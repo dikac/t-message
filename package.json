@@ -23,7 +23,7 @@
     "spec-run-js": "jasmine --config=./jasmine.json",
     "spec-run": "jasmine --reporter=jasmine-ts-console-reporter --config=./jasmine.json",
     "spec": "npm-run-all spec-compile spec-run",
-    "spec-compile": "npm-run-all --parallel spec-compile-script spec-cleanup",
+    "spec-compile": "npm-run-all spec-compile-script spec-cleanup",
     "spec-compile-watch": "npm-run-all --parallel spec-compile-watch-script spec-cleanup-watch",
     "spec-compile-script": "tsc -p tsconfig-spec.json",
     "spec-compile-watch-script": "tsc -w -p tsconfig-spec.json",

@@ -1,2 +1,0 @@
-# t-message
-typescipt message
