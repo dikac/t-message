@@ -1,12 +1,13 @@
 import MessageInterface from "../message";
 import TypeObject from "@dikac/t-object/boolean/object";
-import Infer from "../infer/message";
+import Infer from "../return/return";
+import Guard from "@dikac/t-function/boolean/guard";
 
 export default function Message<
     Assumption extends MessageInterface
 >(
-    value : any,
-    validation : (value : any) => value is Infer<Assumption> = (value : any) : value is Infer<Assumption> =>true
+    value : unknown,
+    validation : Guard<unknown, Infer<Assumption>> = (value : unknown) : value is Infer<Assumption> => true
 ) : value is Assumption {
 
     if(!TypeObject<Assumption>(value)) {

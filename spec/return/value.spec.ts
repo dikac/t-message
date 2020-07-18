@@ -1,4 +1,4 @@
-import Value from "../../dist/infer/value";
+import Value from "../../dist/return/value";
 import Message from "../../dist/message";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});

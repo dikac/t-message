@@ -1,5 +1,5 @@
 import Message from "./message";
-import Infer from "./infer/message";
+import Infer from "./return/return";
 import ObjectProperty from "@dikac/t-object/value/property";
 import ValueMemoize from "@dikac/t-value/memoize";
 /**
