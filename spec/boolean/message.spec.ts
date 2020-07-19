@@ -25,7 +25,7 @@ describe("valid", function() {
 
 });
 
-describe("invalid", function() {
+describe("invalid validated", function() {
 
     it("expect object, given string", () => {
 
@@ -38,6 +38,24 @@ describe("invalid", function() {
 
         let message = {message : 1};
         expect(Type(message, ObjectType)).toBe(false)
+
+    });
+
+});
+
+describe("invalid data", function() {
+
+    it("expect object, given string", () => {
+
+        let message = {};
+        expect(Type(message)).toBe(false)
+
+    });
+
+    it("expect object, given integer", () => {
+
+        let message = 1;
+        expect(Type(message)).toBe(false)
 
     });
 
