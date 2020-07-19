@@ -1,4 +1,4 @@
 import MessageInterface from "../message";
-import Infer from "../return/return";
+import MessageReturn from "../return/return";
 import Guard from "@dikac/t-function/boolean/guard";
-export default function Message<Assumption extends MessageInterface>(value: unknown, validation: Guard<unknown, Infer<Assumption>> | undefined): value is Assumption;
+export default function Message<Assumption extends MessageInterface>(value: unknown, validation?: Guard<unknown, MessageReturn<Assumption>>): value is Assumption;

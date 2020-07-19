@@ -4,59 +4,105 @@ import ObjectType from "@dikac/t-object/boolean/object";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
-describe("valid", function() {
 
-    it("object", () => {
 
-        let message = {message :{}};
-        expect(Type(message, ObjectType)).toBe(true)
+describe("unvalidated value", function() {
+
+    describe("valid", function() {
+
+        it("string", () => {
+
+            let message = {message : 'string'};
+            expect(Type(message)).toBe(true)
+
+        });
+
+        it("integer", () => {
+
+            let message = {message : 1};
+            expect(Type(message)).toBe(true)
+
+        });
     });
 
-    it("class", () => {
+    describe("invalid", function() {
 
-        class C {
-            constructor(
-                public message : object = {}
-            ){}
-        }
+        it("string", () => {
 
-        expect(Type(new C, ObjectType)).toBe(true)
+            let message = 'string';
+            expect(Type(message)).toBe(false)
+
+        });
+
+        it("integer", () => {
+
+            let message = 1;
+            expect(Type(message)).toBe(false)
+
+        });
+    });
+})
+
+
+describe("validated value", function() {
+
+    describe("valid", function() {
+
+        it("object", () => {
+
+            let message = {message :{}};
+            expect(Type(message, ObjectType)).toBe(true)
+        });
+
+        it("class", () => {
+
+            class C {
+                constructor(
+                    public message : object = {}
+                ){}
+            }
+
+            expect(Type(new C, ObjectType)).toBe(true)
+        });
     });
 
-});
+    describe("invalid value", function() {
 
-describe("invalid validated", function() {
+        it("object", () => {
 
-    it("expect object, given string", () => {
+            let message = {message :1};
+            expect(Type(message, ObjectType)).toBe(false)
+        });
 
-        let message = {message : 'string'};
-        expect(Type(message, ObjectType)).toBe(false)
+        it("class", () => {
 
+            class C {
+                constructor(
+                    public message : number = 1
+                ){}
+            }
+
+            expect(Type(new C, ObjectType)).toBe(false)
+        });
     });
 
-    it("expect object, given integer", () => {
+    describe("invalid message", function() {
 
-        let message = {message : 1};
-        expect(Type(message, ObjectType)).toBe(false)
+        it("object", () => {
 
+            let message = {};
+            expect(Type(message, ObjectType)).toBe(false)
+        });
+
+        it("class", () => {
+
+            class C {
+                constructor(
+                    public string : string = '1'
+                ){}
+            }
+
+            expect(Type(new C, ObjectType)).toBe(false)
+        });
     });
-
-});
-
-describe("invalid data", function() {
-
-    it("expect object, given string", () => {
-
-        let message = {};
-        expect(Type(message)).toBe(false)
-
-    });
-
-    it("expect object, given integer", () => {
-
-        let message = 1;
-        expect(Type(message)).toBe(false)
-
-    });
-
-});
+})
