@@ -1,5 +1,6 @@
-import MessageInterface from "../message";
+import Return from "../message/return";
 
-type Return<Type> = Type extends MessageInterface<infer As> ? As : never;
-
+/**
+ * @deprecated moved to ../message/return
+ */
 export default Return;

@@ -1,3 +1,5 @@
-import Infer from "./return";
-import MessageInterface from "../message";
-export default function Value<Message extends MessageInterface>(message: Message): Infer<Message>;
+import Value from "../message/value";
+/**
+ * @deprecated moved to ../message/value
+ */
+export default Value;

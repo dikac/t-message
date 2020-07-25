@@ -1,7 +1,6 @@
-import Infer from "./return";
-import MessageInterface from "../message";
+import Value from "../message/value";
 
-export default function Value<Message extends MessageInterface>(message : Message) : Infer<Message> {
-
-    return <Infer<Message>> message.message;
-}
+/**
+ * @deprecated moved to ../message/value
+ */
+export default Value;

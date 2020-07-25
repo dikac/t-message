@@ -4,14 +4,15 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+        define(["require", "exports", "../message/value"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    function Value(message) {
-        return message.message;
-    }
-    exports.default = Value;
+    const value_1 = require("../message/value");
+    /**
+     * @deprecated moved to ../message/value
+     */
+    exports.default = value_1.default;
 });
 //# sourceMappingURL=value.js.map
