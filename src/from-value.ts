@@ -1,5 +1,5 @@
 import Value from "@dikac/t-value/value";
-import InferValue from "@dikac/t-value/infer/value";
+import InferValue from "@dikac/t-value/value/value";
 import Message from "./message";
 
 export default class FromValue<
