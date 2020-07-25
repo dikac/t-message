@@ -1,7 +1,7 @@
 import MessageInterface from "../message";
 import TypeObject from "@dikac/t-object/boolean/object";
 import ObjectProperty from "@dikac/t-object/boolean/property";
-import MessageReturn from "../return/return";
+import MessageReturn from "../message/message";
 import Guard from "@dikac/t-function/boolean/guard";
 
 
