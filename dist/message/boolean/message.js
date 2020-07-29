@@ -4,18 +4,13 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-object/boolean/object", "@dikac/t-object/boolean/property"], factory);
+        define(["require", "exports"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const object_1 = require("@dikac/t-object/boolean/object");
-    const property_1 = require("@dikac/t-object/boolean/property");
-    function Message(value) {
-        if (!object_1.default(value)) {
-            return false;
-        }
-        if (!property_1.default(value, 'message')) {
+    function Message(value, validation) {
+        if (!validation(value.message)) {
             return false;
         }
         return true;

@@ -1,10 +1,20 @@
 import Type from "../../dist/boolean/message";
-import ObjectType from "@dikac/t-object/boolean/object";
-
+import Message from "../../dist/message";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
+describe(`compiler compatible`,function() {
 
+    let data : unknown = null;
+
+    if(Type(data)) {
+        let message : Message = data;
+    } else {
+        // @ts-expect-error
+        let message : Message = data;
+    }
+
+});
 
 describe("unvalidated value", function() {
 
@@ -51,7 +61,7 @@ describe("validated value", function() {
         it("object", () => {
 
             let message = {message :{}};
-            expect(Type(message, ObjectType)).toBe(true)
+            expect(Type(message)).toBe(true)
         });
 
         it("class", () => {
@@ -62,27 +72,7 @@ describe("validated value", function() {
                 ){}
             }
 
-            expect(Type(new C, ObjectType)).toBe(true)
-        });
-    });
-
-    describe("invalid value", function() {
-
-        it("object", () => {
-
-            let message = {message :1};
-            expect(Type(message, ObjectType)).toBe(false)
-        });
-
-        it("class", () => {
-
-            class C {
-                constructor(
-                    public message : number = 1
-                ){}
-            }
-
-            expect(Type(new C, ObjectType)).toBe(false)
+            expect(Type(new C)).toBe(true)
         });
     });
 
@@ -91,7 +81,7 @@ describe("validated value", function() {
         it("object", () => {
 
             let message = {};
-            expect(Type(message, ObjectType)).toBe(false)
+            expect(Type(message)).toBe(false)
         });
 
         it("class", () => {
@@ -102,7 +92,7 @@ describe("validated value", function() {
                 ){}
             }
 
-            expect(Type(new C, ObjectType)).toBe(false)
+            expect(Type(new C)).toBe(false)
         });
     });
 })
