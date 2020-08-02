@@ -1,5 +1,5 @@
 import Message from "./message";
-import Infer from "./message/message";
+import Infer from "./message/infer";
 
 export default class Readonly<
     Container extends Message = Message

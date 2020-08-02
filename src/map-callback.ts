@@ -1,6 +1,6 @@
 import MessageInterface from "./message";
 import Fn from "@dikac/t-function/function-single";
-import Return from "./message/message";
+import Return from "./message/infer";
 
 export default function MapCallback<
     Replace,

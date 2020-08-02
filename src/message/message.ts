@@ -1,5 +1,8 @@
-import MessageInterface from "../message";
+import Infer from "./infer";
 
-type Message<Type> = Type extends MessageInterface<infer As> ? As : never;
+/**
+ * @deprecated use {@see Infer}
+ */
 
+type Message<Type> = Infer<Type>;
 export default Message;

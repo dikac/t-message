@@ -1,6 +1,6 @@
 import Guard from "../boolean/message";
 import Function from "@dikac/t-function/function";
-import Parameter from "@dikac/t-function/assert/parameter";
+import Callback from "@dikac/t-function/assert/callback";
 import StringError from "./throwable/message";
 import MessageInterface from "../message";
 
@@ -9,5 +9,5 @@ export default function Message(
     error : Function<[unknown], Error> = StringError
 ) : asserts value is MessageInterface {
 
-    Parameter(value, Guard, error);
+    Callback(value, Guard, error);
 }

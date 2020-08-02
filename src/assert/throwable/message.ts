@@ -9,5 +9,5 @@ export default function Message(
     error : Function<[string], Error> = (string : string) => new Error(string)
 ) : Error {
 
-    return Callback(string, message, error);
+    return Callback([string], message, error);
 }
