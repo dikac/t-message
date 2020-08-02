@@ -3,19 +3,19 @@ import InferValue from "@dikac/t-value/value/infer";
 import Message from "./message";
 
 export default class FromValue<
-    Val extends Value
+    ValueT extends Value
 > implements
-    Readonly<Message<InferValue<Val>>>
+    Readonly<Message<InferValue<ValueT>>>
 {
 
     constructor(
-        public subject : Val
+        public subject : ValueT
     ) {
     }
 
 
-    get message() : InferValue<Val> {
+    get message() : InferValue<ValueT> {
 
-        return <InferValue<Val>> this.subject.value;
+        return <InferValue<ValueT>> this.subject.value;
     }
 }

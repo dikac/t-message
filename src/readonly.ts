@@ -2,19 +2,19 @@ import Message from "./message";
 import Infer from "./message/infer";
 
 export default class Readonly<
-    Container extends Message = Message
+    MessageT extends Message = Message
 > implements
-    globalThis.Readonly<Message<Infer<Container>>>
+    globalThis.Readonly<Message<Infer<MessageT>>>
 {
 
     constructor(
-        public subject: Container
+        public subject: MessageT
     ) {
 
     }
 
-    get message(): Infer<Container> {
+    get message(): Infer<MessageT> {
 
-        return <Infer<Container>> this.subject.message;
+        return <Infer<MessageT>> this.subject.message;
     }
 }

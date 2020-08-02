@@ -9,14 +9,14 @@ import ValueMemoize from "@dikac/t-value/memoize";
  * suitable to cached value from heave operation
  */
 export default class Memoize<
-    Container extends Message
+    MessageT extends Message
 > implements
-    Readonly<Message<Infer<Container>>>
+    Readonly<Message<Infer<MessageT>>>
 {
-    public memoize : ValueMemoize<ObjectProperty<'message', Container>>;
+    public memoize : ValueMemoize<ObjectProperty<'message', MessageT>>;
 
     constructor(
-        public subject : Container
+        public subject : MessageT
     ) {
 
         let value = new ObjectProperty(subject, 'message');
@@ -24,9 +24,9 @@ export default class Memoize<
     }
 
 
-    get message () : Infer<Container> {
+    get message () : Infer<MessageT> {
 
-        return <Infer<Container>> this.memoize.value;
+        return <Infer<MessageT>> this.memoize.value;
     }
 
 }

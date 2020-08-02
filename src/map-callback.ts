@@ -1,21 +1,21 @@
-import MessageInterface from "./message";
+import Message from "./message";
 import Fn from "@dikac/t-function/function-single";
 import Return from "./message/infer";
 
 export default function MapCallback<
     Replace,
-    Message extends MessageInterface = MessageInterface
+    MessageT extends Message = Message
 >(
-    message : Message,
-    callback : Fn<Return<Message>, Replace>
-) : Readonly<MessageInterface<Replace> & {subject : Message}> {
+    message : MessageT,
+    callback : Fn<Return<MessageT>, Replace>
+) : Readonly<Message<Replace> & {subject : MessageT}> {
 
     return {
         get subject() {
             return message
         },
         get message() {
-            return callback(<Return<Message>>message.message)
+            return callback(<Return<MessageT>>message.message)
         }
     }
 }

@@ -1,20 +1,20 @@
 import Message from "./message";
 import Argument from "@dikac/t-function/argument/argument";
-import Functions from "@dikac/t-function/function";
+import Function from "@dikac/t-function/function";
 
 export default class Callback<
-    Fn extends Functions,
-> implements Readonly<Message<ReturnType<Fn>>>, Readonly<Argument<Parameters<Fn>>>
+    FunctionT extends Function,
+> implements Readonly<Message<ReturnType<FunctionT>>>, Readonly<Argument<Parameters<FunctionT>>>
 {
     constructor(
-        readonly callback : Fn,
-        readonly argument : Parameters<Fn>,
+        readonly callback : FunctionT,
+        readonly argument : Parameters<FunctionT>,
     ) {
     }
 
-    get message () : ReturnType<Fn> {
+    get message () : ReturnType<FunctionT> {
 
-        return <ReturnType<Fn>>this.callback(...this.argument);
+        return <ReturnType<FunctionT>>this.callback(...this.argument);
     }
 
 
