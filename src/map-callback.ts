@@ -4,18 +4,18 @@ import Return from "./message/infer";
 
 export default function MapCallback<
     Replace,
-    MessageT extends Message = Message
+    MessageTemplate extends Message = Message
 >(
-    message : MessageT,
-    callback : Fn<Return<MessageT>, Replace>
-) : Readonly<Message<Replace> & {subject : MessageT}> {
+    message : MessageTemplate,
+    callback : Fn<Return<MessageTemplate>, Replace>
+) : Readonly<Message<Replace> & {subject : MessageTemplate}> {
 
     return {
         get subject() {
             return message
         },
         get message() {
-            return callback(<Return<MessageT>>message.message)
+            return callback(<Return<MessageTemplate>>message.message)
         }
     }
 }

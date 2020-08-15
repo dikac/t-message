@@ -1,7 +1,6 @@
 import MessageInterface from "../../message";
 import Guard from "@dikac/t-function/boolean/guard";
 
-
 export default function Message<
     Type
 >(

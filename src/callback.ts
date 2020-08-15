@@ -2,19 +2,34 @@ import Message from "./message";
 import Argument from "@dikac/t-function/argument/argument";
 import Function from "@dikac/t-function/function";
 
+/**
+ * use callback return as {@link Message.message} value
+ */
 export default class Callback<
-    FunctionT extends Function,
-> implements Readonly<Message<ReturnType<FunctionT>>>, Readonly<Argument<Parameters<FunctionT>>>
+    FunctionTemplate extends Function,
+> implements
+    Readonly<Message<ReturnType<FunctionTemplate>>>,
+    Readonly<Argument<Parameters<FunctionTemplate>>>
 {
+    /**
+     * @param callback
+     * to be used for generating {@link Message.message}
+     *
+     * @param argument
+     * argument fon {@param callback}
+     */
     constructor(
-        readonly callback : FunctionT,
-        readonly argument : Parameters<FunctionT>,
+        readonly callback : FunctionTemplate,
+        readonly argument : Parameters<FunctionTemplate>,
     ) {
     }
 
-    get message () : ReturnType<FunctionT> {
+    /**
+     * value from {@template FunctionTemplate} return
+     */
+    get message () : ReturnType<FunctionTemplate> {
 
-        return <ReturnType<FunctionT>>this.callback(...this.argument);
+        return <ReturnType<FunctionTemplate>>this.callback(...this.argument);
     }
 
 

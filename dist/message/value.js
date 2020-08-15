@@ -9,6 +9,12 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    /**
+     * get {@link Message.message} value
+     *
+     * @param message
+     * object tobe extracted
+     */
     function Value(message) {
         return message.message;
     }

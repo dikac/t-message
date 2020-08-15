@@ -1,3 +1,9 @@
 import Infer from "./infer";
-import MessageInterface from "../message";
-export default function Value<Message extends MessageInterface>(message: Message): Infer<Message>;
+import Message from "../message";
+/**
+ * get {@link Message.message} value
+ *
+ * @param message
+ * object tobe extracted
+ */
+export default function Value<MessageTemplate extends Message>(message: MessageTemplate): Infer<MessageTemplate>;

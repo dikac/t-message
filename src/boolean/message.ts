@@ -1,16 +1,12 @@
 import MessageInterface from "../message";
-import TypeObject from "@dikac/t-object/boolean/object";
 import ObjectProperty from "@dikac/t-object/boolean/property";
 
-
+/**
+ * check if {@param value} is compatible with {@link MessageInterface}
+ */
 export default function Message(
-    value : unknown,
+    value : object,
 ) : value is MessageInterface {
-
-    if(!TypeObject(value)) {
-
-        return false;
-    }
 
     if(!ObjectProperty(value, 'message')) {
 

@@ -11,6 +11,9 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     const message_1 = require("../../boolean/string/message");
     const callback_1 = require("@dikac/t-function/assert/throwable/callback");
+    /**
+     * @deprecated use {@link Callback} instead
+     */
     function Message(string, message = message_1.default, error = (string) => new Error(string)) {
         return callback_1.default([string], message, error);
     }

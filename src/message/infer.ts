@@ -1,5 +1,8 @@
-import MessageInterface from "../message";
+import Message from "../message";
 
-type Infer<Type> = Type extends MessageInterface<infer As> ? As : never;
+/**
+ * get {@link Message.message} type
+ */
+type Infer<Type> = Type extends Message<infer As> ? As : never;
 
 export default Infer;

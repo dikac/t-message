@@ -1,12 +1,12 @@
 {
   "name": "@dikac/t-message",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Typescript message",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-function": "^0.11.5",
-    "@dikac/t-object": "^0.29.2",
-    "@dikac/t-value": "^0.12.0",
+    "@dikac/t-object": "^0.29.3",
+    "@dikac/t-value": "^0.12.1",
     "ts-toolbelt": "^6.15.4"
   },
   "devDependencies": {

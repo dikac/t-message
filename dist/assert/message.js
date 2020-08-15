@@ -12,6 +12,14 @@
     const message_1 = require("../boolean/message");
     const callback_1 = require("@dikac/t-function/assert/callback");
     const message_2 = require("./throwable/message");
+    /**
+     * assert {@param value} is compatible with {@link MessageInterface}
+     *
+     * @param value
+     *
+     * @param error
+     * throw {@link Error} from {@param error} if  {@param value} is not compatible
+     */
     function Message(value, error = message_2.default) {
         callback_1.default(value, message_1.default, error);
     }

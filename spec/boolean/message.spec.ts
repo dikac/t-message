@@ -5,7 +5,7 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
-    let data : unknown = null;
+    let data : object = {null:null};
 
     if(Type(data)) {
         let message : Message = data;
@@ -39,14 +39,14 @@ describe("unvalidated value", function() {
 
         it("string", () => {
 
-            let message = 'string';
+            let message = {string:'string'};
             expect(Type(message)).toBe(false)
 
         });
 
         it("integer", () => {
 
-            let message = 1;
+            let message = {integer:1};
             expect(Type(message)).toBe(false)
 
         });

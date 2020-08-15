@@ -7,9 +7,9 @@ import ValueMemoize from "@dikac/t-value/memoize";
  *
  * suitable to cached value from heave operation
  */
-export default class Memoize<MessageT extends Message> implements Readonly<Message<Infer<MessageT>>> {
-    subject: MessageT;
-    memoize: ValueMemoize<ObjectProperty<'message', MessageT>>;
-    constructor(subject: MessageT);
-    get message(): Infer<MessageT>;
+export default class Memoize<MessageTemplate extends Message> implements Readonly<Message<Infer<MessageTemplate>>> {
+    subject: MessageTemplate;
+    memoize: ValueMemoize<ObjectProperty<'message', MessageTemplate>>;
+    constructor(subject: MessageTemplate);
+    get message(): Infer<MessageTemplate>;
 }

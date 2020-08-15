@@ -9,6 +9,9 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    /**
+     * construct readonly {@link Message}
+     */
     class Readonly {
         constructor(subject) {
             this.subject = subject;

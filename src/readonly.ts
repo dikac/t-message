@@ -1,20 +1,22 @@
 import Message from "./message";
 import Infer from "./message/infer";
 
+/**
+ * construct readonly {@link Message}
+ */
 export default class Readonly<
-    MessageT extends Message = Message
+    MessageTemplate extends Message = Message
 > implements
-    globalThis.Readonly<Message<Infer<MessageT>>>
+    globalThis.Readonly<Message<Infer<MessageTemplate>>>
 {
 
     constructor(
-        public subject: MessageT
+        public subject: MessageTemplate
     ) {
-
     }
 
-    get message(): Infer<MessageT> {
+    get message(): Infer<MessageTemplate> {
 
-        return <Infer<MessageT>> this.subject.message;
+        return <Infer<MessageTemplate>> this.subject.message;
     }
 }

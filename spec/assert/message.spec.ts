@@ -1,15 +1,16 @@
 import Message from "../../dist/assert/message";
+import MessageInterface from "../../dist/message";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it(`compiler compatible`,function() {
 
-    let data : unknown = null;
+    let data : object = {};
 
     try {
         Message(data);
 
-        let message : any = data.message;
+        let message : unknown = data.message;
 
         fail('exception should thrown');
 
@@ -25,7 +26,7 @@ describe("boolean", function() {
 
     it(`true`, () => {
         try {
-            Message(true);
+            Message(new Boolean(true));
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -34,7 +35,7 @@ describe("boolean", function() {
 
     it(`false`, () => {
         try {
-            Message(false);
+            Message(new Boolean(false));
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -43,27 +44,6 @@ describe("boolean", function() {
 
 });
 
-describe("string", function() {
-
-    it(`primitive`, () => {
-        try {
-            Message('str');
-            fail('exception should thrown');
-        } catch (e) {
-            expect(e).toBeInstanceOf(Error);
-        }
-    });
-
-    it(`object`, () => {
-        try {
-            Message(new String('str'));
-            fail('exception should thrown');
-        } catch (e) {
-            expect(e).toBeInstanceOf(Error);
-        }
-    });
-
-});
 
 describe("object", function() {
 
@@ -118,26 +98,6 @@ describe("function", function() {
 
 });
 
-describe("empty", function() {
 
-    it(`null `, () => {
-        try {
-            Message(null);
-            fail('exception should thrown');
-        } catch (e) {
-            expect(e).toBeInstanceOf(Error);
-        }
-    });
-
-    it(`undefined`, () => {
-        try {
-            Message(undefined);
-            fail('exception should thrown');
-        } catch (e) {
-            expect(e).toBeInstanceOf(Error);
-        }
-    });
-
-});
 
 
