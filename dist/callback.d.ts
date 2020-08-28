@@ -1,10 +1,10 @@
 import Message from "./message";
 import Argument from "@dikac/t-function/argument/argument";
-import Function from "@dikac/t-function/function";
+import Callable from "@dikac/t-function/callable";
 /**
  * use callback return as {@link Message.message} value
  */
-export default class Callback<FunctionTemplate extends Function> implements Readonly<Message<ReturnType<FunctionTemplate>>>, Readonly<Argument<Parameters<FunctionTemplate>>> {
+export default class Callback<FunctionTemplate extends Callable> implements Readonly<Message<ReturnType<FunctionTemplate>>>, Readonly<Argument<Parameters<FunctionTemplate>>> {
     readonly callback: FunctionTemplate;
     readonly argument: Parameters<FunctionTemplate>;
     /**

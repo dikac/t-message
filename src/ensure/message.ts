@@ -1,4 +1,3 @@
-import Function from "@dikac/t-function/function";
 import AssertString from "../assert/message";
 import MessageError from "../assert/throwable/message";
 import MessageInterface from "../message";
@@ -13,7 +12,7 @@ import MessageInterface from "../message";
  */
 export default function Message(
     value : object,
-    error : Function<[object], Error> = MessageError
+    error : (value:object)=>Error = MessageError
 ) : MessageInterface {
 
     AssertString(value, error);

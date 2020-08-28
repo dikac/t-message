@@ -1,16 +1,16 @@
 {
   "name": "@dikac/t-message",
-  "version": "0.8.8",
+  "version": "0.8.9",
   "description": "Typescript message",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "^0.11.5",
-    "@dikac/t-object": "^0.31.1",
-    "@dikac/t-value": "^0.12.1",
+    "@dikac/t-function": "^0.12.2",
+    "@dikac/t-object": "^0.32.0",
+    "@dikac/t-value": "^0.12.3",
     "ts-toolbelt": "^6.15.5"
   },
   "devDependencies": {
-    "@types/jasmine": "^3.5.13",
+    "@types/jasmine": "^3.5.14",
     "cpy-cli": "^3.1.1",
     "jasmine": "^3.6.1",
     "jasmine-ts-console-reporter": "^3.1.1",

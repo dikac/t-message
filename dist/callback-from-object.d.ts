@@ -1,4 +1,4 @@
 import Message from "./message";
-import Function from "@dikac/t-function/function";
 import Argument from "@dikac/t-function/argument/argument";
-export default function CallbackFromObject<FunctionTemplate extends Function>(object: Message<FunctionTemplate> & Argument<Parameters<FunctionTemplate>>): Readonly<Message<ReturnType<FunctionTemplate>> & Argument<Parameters<FunctionTemplate>>>;
+import Callable from "@dikac/t-function/callable";
+export default function CallbackFromObject<FunctionTemplate extends Callable>(object: Message<FunctionTemplate> & Argument<Parameters<FunctionTemplate>>): Readonly<Message<ReturnType<FunctionTemplate>> & Argument<Parameters<FunctionTemplate>>>;

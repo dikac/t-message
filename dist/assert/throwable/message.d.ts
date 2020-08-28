@@ -1,5 +1,4 @@
-import Function from "@dikac/t-function/function";
 /**
  * @deprecated use {@link Callback} instead
  */
-export default function Message(string: unknown, message?: Function<[boolean, unknown], string>, error?: Function<[string], Error>): Error;
+export default function Message(string: unknown, message?: (valid: boolean, value: unknown) => string, error?: (message: string) => Error): Error;

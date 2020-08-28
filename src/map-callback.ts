@@ -1,5 +1,4 @@
 import Message from "./message";
-import Fn from "@dikac/t-function/function-single";
 import Return from "./message/infer";
 
 export default function MapCallback<
@@ -7,7 +6,7 @@ export default function MapCallback<
     MessageTemplate extends Message = Message
 >(
     message : MessageTemplate,
-    callback : Fn<Return<MessageTemplate>, Replace>
+    callback : (message:Return<MessageTemplate>)=>Replace
 ) : Readonly<Message<Replace> & {subject : MessageTemplate}> {
 
     return {

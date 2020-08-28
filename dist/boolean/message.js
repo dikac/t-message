@@ -4,17 +4,17 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-object/property/boolean/property"], factory);
+        define(["require", "exports", "@dikac/t-object/property/boolean/exists"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const property_1 = require("@dikac/t-object/property/boolean/property");
+    const exists_1 = require("@dikac/t-object/property/boolean/exists");
     /**
      * check if {@param value} is compatible with {@link MessageInterface}
      */
     function Message(value) {
-        if (!property_1.default(value, 'message')) {
+        if (!exists_1.default(value, 'message')) {
             return false;
         }
         return true;

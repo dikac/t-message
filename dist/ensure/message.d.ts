@@ -1,4 +1,3 @@
-import Function from "@dikac/t-function/function";
 import MessageInterface from "../message";
 /**
  * return {@param value} is compatible with {@link MessageInterface}
@@ -8,4 +7,4 @@ import MessageInterface from "../message";
  * @param error
  * throw {@link Error} from {@param error} if {@param value} is not compatible
  */
-export default function Message(value: object, error?: Function<[object], Error>): MessageInterface;
+export default function Message(value: object, error?: (value: object) => Error): MessageInterface;
