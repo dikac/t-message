@@ -5,7 +5,7 @@ export default class Sentence implements ValueOf<string> {
     constructor(
         public valid : boolean,
         public subject : string,
-        public predicates: [invalid : string, valid : string],
+        public predicates: {invalid : string, valid : string},
         public object : string
     ) {
     }
@@ -29,7 +29,7 @@ export default class Sentence implements ValueOf<string> {
             messages.push(this.subject);
         }
 
-        const predicate = this.predicates[this.valid ? 1 : 0];
+        const predicate = this.valid ? this.predicates.valid : this.predicates.invalid;
 
         if(predicate) {
 

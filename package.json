@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-message",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Typescript message",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
@@ -19,7 +19,7 @@
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "ts-cleaner": "^1.0.5",
-    "typescript": "^4.0.2"
+    "typescript": "3.9.7"
   },
   "scripts": {
     "spec-run-js": "jasmine --config=./jasmine.json",

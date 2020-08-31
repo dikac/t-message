@@ -27,7 +27,7 @@
             if (this.subject) {
                 messages.push(this.subject);
             }
-            const predicate = this.predicates[this.valid ? 1 : 0];
+            const predicate = this.valid ? this.predicates.valid : this.predicates.invalid;
             if (predicate) {
                 messages.push(predicate);
             }

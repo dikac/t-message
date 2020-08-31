@@ -10,10 +10,10 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     const sentence_1 = require("../../sentence");
-    const sentence = new sentence_1.default(false, '', [
-        'is not compatible with',
-        'is compatible with',
-    ], 'Message type');
+    const sentence = new sentence_1.default(false, '', {
+        invalid: 'is not compatible with',
+        valid: 'is compatible with',
+    }, 'Message type');
     function Message(valid, value, subject = '') {
         sentence.valid = valid;
         sentence.subject = subject;

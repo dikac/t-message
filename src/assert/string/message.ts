@@ -3,10 +3,10 @@ import Sentence from "../../sentence";
 const sentence = new Sentence(
     false,
     '',
-    [
-        'is not compatible with',
-        'is compatible with',
-    ], 'Message type'
+    {
+        invalid:'is not compatible with',
+        valid:'is compatible with',
+    }, 'Message type'
 );
 
 export default function Message(

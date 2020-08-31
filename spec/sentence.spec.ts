@@ -2,7 +2,7 @@ import Sentence from "../dist/sentence";
 
 it("enable console log", () => spyOn(console, 'log').and.callThrough());
 
-let sentence = new Sentence(true, 'value', ['is not', 'is'], 'valid');
+let sentence = new Sentence(true, 'value', {invalid:'is not', valid:'is'}, 'valid');
 
 it(`true`, () => {
     expect(sentence.message).toBe('value is valid')
