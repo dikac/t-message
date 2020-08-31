@@ -4,19 +4,19 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../../sentence"], factory);
+        define(["require", "exports", "@dikac/t-object/string/name", "@dikac/t-string/message/sentences"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const sentence_1 = require("../../sentence");
-    const sentence = new sentence_1.default(false, '', {
-        invalid: 'is not compatible with',
-        valid: 'is compatible with',
-    }, 'Message type');
+    const name_1 = require("@dikac/t-object/string/name");
+    const sentences_1 = require("@dikac/t-string/message/sentences");
     function Message(valid, value, subject = '') {
-        sentence.valid = valid;
-        sentence.subject = subject;
+        let sentence = new sentences_1.default(valid);
+        sentence.value.push(subject, name_1.default(value));
+        sentence.expectation.invalid.push('is not compatible with');
+        sentence.expectation.valid.push('is compatible with');
+        sentence.type.push('Message type');
         return sentence.message;
     }
     exports.default = Message;
