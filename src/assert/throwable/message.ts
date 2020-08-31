@@ -1,4 +1,4 @@
-import MessageType from "../../boolean/string/message";
+import MessageType from "../string/message";
 import Callback from "@dikac/t-function/assert/throwable/callback";
 
 /**

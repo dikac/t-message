@@ -1,0 +1,1 @@
+{"version":3,"file":"filter-callback.js","sourceRoot":"","sources":["../src/filter-callback.ts"],"names":[],"mappings":";;;;;;;;;;;IAGA;;;;;;;OAOG;IAEH,MAAqB,cAAc;QAK/B,YACa,OAAkB,EAClB,QAA8C;YAD9C,YAAO,GAAP,OAAO,CAAW;YAClB,aAAQ,GAAR,QAAQ,CAAsC;QAE3D,CAAC;QAED,IAAI,OAAO;YAEP,OAAO,IAAI,CAAC,QAAQ,CAAmB,IAAI,CAAC,OAAO,CAAqB,CAAC;QAC7E,CAAC;KACJ;IAfD,iCAeC"}

@@ -13,7 +13,6 @@ export default class FromValue<
     ) {
     }
 
-
     get message() : InferValue<ValueTemplate> {
 
         return <InferValue<ValueTemplate>> this.subject.value;
