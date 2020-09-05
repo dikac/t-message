@@ -1,6 +1,6 @@
 import Message from "./message";
 import Infer from "./message/infer";
-import ObjectProperty from "@dikac/t-object/value/property";
+import ObjectProperty from "@dikac/t-object/value/value/property";
 import ValueMemoize from "@dikac/t-value/memoize";
 
 /**
