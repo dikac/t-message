@@ -13,10 +13,10 @@
     const sentences_1 = require("@dikac/t-string/message/sentences");
     function Message(valid, value, subject = '') {
         let sentence = new sentences_1.default(valid);
-        sentence.subject.push(subject, name_1.default(value));
-        sentence.predicate.invalid.push('is not compatible with');
-        sentence.predicate.valid.push('is compatible with');
-        sentence.object.push('Message type');
+        sentence.subject.push(subject, `"${name_1.default(value)}"`);
+        sentence.reject.push('is not compatible with');
+        sentence.accept.push('is compatible with');
+        sentence.expect.push('Message type');
         return sentence.message;
     }
     exports.default = Message;
