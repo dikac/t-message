@@ -36,7 +36,6 @@ it('false invalid', ()=>{
 });
 
 
-
 it('true invalid CLass', ()=>{
 
     expect(Message(true, new Set(), 'argument')).toBe(
