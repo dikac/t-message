@@ -7,6 +7,7 @@ import ValueMemoize from "@dikac/t-value/memoize";
  * Wrap {@link Message} and cache its value
  *
  * suitable to cached value from heave operation
+ * @deprecated
  */
 export default class Memoize<
     MessageTemplate extends Message

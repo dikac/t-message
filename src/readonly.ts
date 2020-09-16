@@ -3,6 +3,7 @@ import Infer from "./message/infer";
 
 /**
  * construct readonly {@link Message}
+ * @deprecated
  */
 export default class Readonly<
     MessageTemplate extends Message = Message

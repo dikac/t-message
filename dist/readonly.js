@@ -11,6 +11,7 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     /**
      * construct readonly {@link Message}
+     * @deprecated
      */
     class Readonly {
         constructor(subject) {

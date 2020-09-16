@@ -15,6 +15,7 @@
      * Wrap {@link Message} and cache its value
      *
      * suitable to cached value from heave operation
+     * @deprecated
      */
     class Memoize {
         constructor(subject) {

@@ -2,6 +2,9 @@ import Value from "@dikac/t-value/value";
 import InferValue from "@dikac/t-value/value/infer";
 import Message from "./message";
 
+/**
+ * @deprecated
+ */
 export default class FromValue<
     ValueTemplate extends Value
 > implements

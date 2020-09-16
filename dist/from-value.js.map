@@ -1,1 +1,1 @@
-{"version":3,"file":"from-value.js","sourceRoot":"","sources":["../src/from-value.ts"],"names":[],"mappings":";;;;;;;;;;;IAIA,MAAqB,SAAS;QAM1B,YACW,OAAuB;YAAvB,YAAO,GAAP,OAAO,CAAgB;QAElC,CAAC;QAED,IAAI,OAAO;YAEP,OAAmC,IAAI,CAAC,OAAO,CAAC,KAAK,CAAC;QAC1D,CAAC;KACJ;IAfD,4BAeC"}
+{"version":3,"file":"from-value.js","sourceRoot":"","sources":["../src/from-value.ts"],"names":[],"mappings":";;;;;;;;;;;IAIA;;OAEG;IACH,MAAqB,SAAS;QAM1B,YACW,OAAuB;YAAvB,YAAO,GAAP,OAAO,CAAgB;QAElC,CAAC;QAED,IAAI,OAAO;YAEP,OAAmC,IAAI,CAAC,OAAO,CAAC,KAAK,CAAC;QAC1D,CAAC;KACJ;IAfD,4BAeC"}
