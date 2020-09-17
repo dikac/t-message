@@ -1,1 +1,1 @@
-{"version":3,"file":"callback-from-object.js","sourceRoot":"","sources":["../src/callback-from-object.ts"],"names":[],"mappings":";;;;;;;;;;;IAEA,yCAAkC;IAGlC,SAAwB,kBAAkB,CACtC,MAA2E;QAG3E,OAAO,IAAI,kBAAQ,CAAC,MAAM,CAAC,OAAO,EAAE,MAAM,CAAC,QAAQ,CAAC,CAAC;IACzD,CAAC;IALD,qCAKC"}
+{"version":3,"file":"callback-from-object.js","sourceRoot":"","sources":["../src/callback-from-object.ts"],"names":[],"mappings":"AAEA,OAAO,QAAQ,MAAM,YAAY,CAAC;AAGlC,MAAM,CAAC,OAAO,UAAU,kBAAkB,CACtC,MAA2E;IAG3E,OAAO,IAAI,QAAQ,CAAC,MAAM,CAAC,OAAO,EAAE,MAAM,CAAC,QAAQ,CAAC,CAAC;AACzD,CAAC"}

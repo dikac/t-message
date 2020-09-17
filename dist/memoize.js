@@ -1,32 +1,19 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+import ObjectProperty from "@dikac/t-object/value/property";
+import ValueMemoize from "@dikac/t-value/memoize";
+/**
+ * Wrap {@link Message} and cache its value
+ *
+ * suitable to cached value from heave operation
+ * @deprecated
+ */
+export default class Memoize {
+    constructor(subject) {
+        this.subject = subject;
+        let value = new ObjectProperty(subject, 'message');
+        this.memoize = new ValueMemoize(value);
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-object/value/property", "@dikac/t-value/memoize"], factory);
+    get message() {
+        return this.memoize.value;
     }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    const property_1 = require("@dikac/t-object/value/property");
-    const memoize_1 = require("@dikac/t-value/memoize");
-    /**
-     * Wrap {@link Message} and cache its value
-     *
-     * suitable to cached value from heave operation
-     * @deprecated
-     */
-    class Memoize {
-        constructor(subject) {
-            this.subject = subject;
-            let value = new property_1.default(subject, 'message');
-            this.memoize = new memoize_1.default(value);
-        }
-        get message() {
-            return this.memoize.value;
-        }
-    }
-    exports.default = Memoize;
-});
+}
 //# sourceMappingURL=memoize.js.map

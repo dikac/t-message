@@ -1,28 +1,15 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../assert/message", "../assert/throwable/message"], factory);
-    }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    const message_1 = require("../assert/message");
-    const message_2 = require("../assert/throwable/message");
-    /**
-     * return {@param value} is compatible with {@link MessageInterface}
-     *
-     * @param value
-     *
-     * @param error
-     * throw {@link Error} from {@param error} if {@param value} is not compatible
-     */
-    function Message(value, error = message_2.default) {
-        message_1.default(value, error);
-        return value;
-    }
-    exports.default = Message;
-});
+import AssertString from "../assert/message";
+import MessageError from "../assert/throwable/message";
+/**
+ * return {@param value} is compatible with {@link MessageInterface}
+ *
+ * @param value
+ *
+ * @param error
+ * throw {@link Error} from {@param error} if {@param value} is not compatible
+ */
+export default function Message(value, error = MessageError) {
+    AssertString(value, error);
+    return value;
+}
 //# sourceMappingURL=message.js.map

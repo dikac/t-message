@@ -1,26 +1,13 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+/**
+ * construct readonly {@link Message}
+ * @deprecated
+ */
+export default class Readonly {
+    constructor(subject) {
+        this.subject = subject;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    get message() {
+        return this.subject.message;
     }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    /**
-     * construct readonly {@link Message}
-     * @deprecated
-     */
-    class Readonly {
-        constructor(subject) {
-            this.subject = subject;
-        }
-        get message() {
-            return this.subject.message;
-        }
-    }
-    exports.default = Readonly;
-});
+}
 //# sourceMappingURL=readonly.js.map

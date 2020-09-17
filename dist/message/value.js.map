@@ -1,1 +1,1 @@
-{"version":3,"file":"value.js","sourceRoot":"","sources":["../../src/message/value.ts"],"names":[],"mappings":";;;;;;;;;;;IAGA;;;;;OAKG;IACH,SAAwB,KAAK,CAAkC,OAAyB;QAEpF,OAAgC,OAAO,CAAC,OAAO,CAAC;IACpD,CAAC;IAHD,wBAGC"}
+{"version":3,"file":"value.js","sourceRoot":"","sources":["../../src/message/value.ts"],"names":[],"mappings":"AAGA;;;;;GAKG;AACH,MAAM,CAAC,OAAO,UAAU,KAAK,CAAkC,OAAyB;IAEpF,OAAgC,OAAO,CAAC,OAAO,CAAC;AACpD,CAAC"}
